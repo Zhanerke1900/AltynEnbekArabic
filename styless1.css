@@ -1,0 +1,637 @@
+body, html {
+  overflow-x: hidden;
+}
+ .partners.section {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    background-image: url('fonn.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    z-index: 0;
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  .partners.section::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.558); /* затемнение */
+    z-index: -1; /* ✅ Ушло на задний план */
+  }
+  
+  .partners .containere {
+    position: relative;
+    z-index: 1; /* ✅ Теперь текст выше затемнения */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .titlee {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 40px; 
+    padding-top: 35px;/* ⬅ вот этот отступ опустит текст ниже */
+  }
+  
+  
+  .containere {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .swiper-container {
+    overflow: hidden; /* Обрезаем всё, что вылезает */
+    padding: 0 40px; /* Чтобы логотипы не были слишком у краёв */
+   
+  }
+  
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+  }
+  
+  .swiper-slide img {
+    max-height: 120px;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  
+
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #007bff;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+
+
+  .top-form {
+    width: 100vw;
+    min-height: 300px; /* Вместо height, чтоб не обрезало */
+    position: relative;
+    background: url('fon2.jpg') no-repeat center center / cover;
+    padding: 40px 20px;
+    color: #fff;
+    overflow: hidden;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 40px;
+  }
+  
+  
+  .top-form::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.797);
+    z-index: 0;
+  }
+  
+  .top-form-container {
+    max-width: 2600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+    flex-wrap: wrap;
+    padding:  20px;
+  }
+  
+  
+  /* Левая часть — логотип */
+  .logo-side {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .logo-side img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Правая часть — форма */
+  .form-side {
+    flex: 2;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.678);
+  }
+  
+  .form-side h2 {
+    font-size: 25px;
+    color: #d7ff00;
+    margin-bottom: 10px;
+    font-weight: 700;
+    margin-top: 0;
+    
+  }
+  
+  .form-side .subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #fff;
+  }
+  .form-side .subtitle2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #d7ff00;
+  }
+  .form-side input {
+    width: 250px;
+    padding: 12px;
+    margin: 8px;
+    font-size: 14px;
+    border: none;
+  }
+  
+  /* Кнопка (отдельная) */
+  .submit-btn-top {
+    background-color: #e5ff00;
+    color: black;
+    font-weight: bold;
+    padding: 4px 20px;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  
+  .submit-btn-top:hover {
+    background-color: #ced90000;
+  }
+  
+  .phone-text-top {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #d7ff00;
+  }
+  
+  .phone-text-top span {
+    font-size: 24px;
+    color: #ffffff;
+  }
+  
+  /* Адаптив */
+  @media (max-width: 768px) {
+    .top-form-container {
+      flex-direction: column;
+    }
+  
+    .form-side input {
+      width: 90%;
+      max-width: 300px;
+    }
+  
+    .logo-side img {
+      max-width: 200px;
+    }
+    
+  }
+  
+
+
+  .top-form1 {
+    background: url('кольцо.jpg') no-repeat center center/cover;
+    padding: 60px 20px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    height:25%;
+    width:100vw;
+    text-align: center;
+    margin-top: 50px;
+    
+  }
+  
+  /* Затемнение */
+  .top-form1::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    right:0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.896);
+    z-index: -1;
+  }
+  
+  .form-box-top1 {
+    max-width: 1000px;
+    
+  }
+  
+  .form-box-top1 h2 {
+    font-size: 28px;
+    color: #d7ff00;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  .top-form1 form {
+    display: flex;
+    align-items: center; /* ВЫРАВНИВАЕТ по вертикали */
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  
+  /* Форма в строку */
+  .form-inline {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  /* Поля */
+  .form-inline input {
+    width: 220px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  
+  .top-form1 .submit-btn-top {
+    height: 48px; /* подогнано под поля ввода */
+    position: relative;
+    
+  }
+  
+  .top-form1 .submit-btn-top:hover {
+
+    color: #fff;
+    border: 2px solid #e5ff00;
+  }
+  
+
+
+  
+  .custom5 {
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #2c2c2c;
+    background-color: #fff;
+    text-transform: none !important;
+    font-weight: normal !important;
+   
+    margin-top: 0;
+    margin-bottom: 0;
+   
+  }
+  
+  .container5 {
+    margin-top: 30px;
+    line-height: 1.6;
+    font-weight: normal !important;
+  }
+  
+  .container5 h2 {
+    font-size: 25px;
+    margin-top: 20px;
+   
+    margin-bottom: 10px;
+
+  }
+  
+  .container5 h3 {
+    font-size: 15px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    
+  }
+  
+  .container5 p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .container5 ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+  
+  .container5 ul li {
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  .container5 b {
+    display: block;
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  
+  @media (max-width: 768px) {
+
+   
+    
+    .container5 h2 {
+      text-align: center;
+    }
+    
+    .container5 h3 {
+      text-align: center;
+      
+    }
+    
+
+
+
+
+    .container6 {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Центрирование всех блоков */
+      justify-content: center; /* Центрирование по вертикали, если нужно */
+      text-align: center; /* Центрирование текста */
+      padding: 20px; /* Отступы по краям */
+    }
+  
+    .container6 > div {
+      width: 100%;
+      max-width: 400px; /* Чтобы не было слишком растянуто на широких телефонах */
+      margin: 0 auto 30px auto; /* Центрируем каждый блок и добавляем отступ снизу */
+    }
+  
+    .footer-services,
+    .footer-branches,
+    .footer-contact {
+      margin: 0 auto;
+    }
+  
+    .footer-services .sub_title,
+    .footer-branches .sub_title,
+    .footer-contact .sub_title {
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+  
+    .footer-services div,
+    .footer-branches p,
+    .footer-contact p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+  
+    .custom5 {
+      padding: 20px 10px;
+    }
+    
+  }
+  
+
+
+  .footer-services,
+.footer-branches,
+.footer-contact {
+  text-align: left;
+  margin-left: 200px;
+}
+
+.footer-services .openModal{
+  position:absolute;
+  padding: 110px 95px;
+  color:#2c2c2c00;
+  background-color: #2c2c2c00;
+  border-color: #2c2c2c00;
+
+}
+
+.toast {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+#loading {
+  display: none;
+  color: #ffbb00;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+
+/* 📱 Мобильная адаптация (до 480px) */
+@media (max-width: 768px) {
+  .titlee {
+    font-size: 20px;
+    padding-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .top-form {
+    flex-direction: column;
+    padding: 30px 15px;
+    margin-top: -10px;
+  }
+
+  .top-form-container {
+    padding: 10px;
+  }
+
+  .logo-side {
+    padding: 10px;
+  }
+
+  .logo-side img {
+    max-width: 160px;
+  }
+
+  .form-side {
+    padding: 15px;
+  }
+
+  .form-side input {
+    width: 90%;
+    font-size: 13px;
+  }
+
+  .form-side h2 {
+    font-size: 20px;
+  }
+
+  .form-side .subtitle {
+    font-size: 15px;
+  }
+
+  .form-side .subtitle2 {
+    font-size: 14px;
+  }
+
+  .submit-btn-top {
+    font-size: 14px;
+    padding: 4px 15px;
+  }
+
+  .phone-text-top {
+    font-size: 14px;
+  }
+
+  .phone-text-top span {
+    font-size: 18px;
+  }
+
+  .top-form1 {
+    padding: 40px 10px;
+    bottom: -50px;
+    top: -20px;
+  }
+
+  .top-form1 form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-inline input {
+    width: 60%;
+    
+  }
+
+  .top-form1 .submit-btn-top {
+    width: 60%;
+  }
+ 
+  
+  /* Поля */
+  .form-inline {
+    left: 20%;
+    transform: translateX(20%);
+  
+  }
+
+
+
+
+  
+  .custom5 {
+    margin: 20px 10px;
+    padding: 10px;
+  }
+
+  .footer-services,
+  .footer-branches,
+  .footer-contact {
+    margin-left: 10px;
+    text-align: center;
+  }
+  html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+ 
+}
+/* Общие стили для блока */
+.footer-contact {
+  flex: 1;
+  width: 150px;
+  margin-right: 100px;
+}
+
+/* Оформление графика */
+.footer-contact .schedule {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-contact .sub_title {
+  color: #d4ff00;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.footer-contact p {
+  margin: 0;
+}
+
+.footer-contact b {
+  font-size: 18px;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .footer-contact {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-contact .schedule {
+    align-items: center;
+  }
+}
+.scroll-to-top {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #d4ff00;
+  color: black;
+  font-size: 24px;
+  padding: 10px 15px;
+  
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000000;
+  transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+}
+
+.scroll-to-top:hover {
+  background-color: #c1ea00;
+  transform: translateX(-50%) scale(1.1);
+}
+
