@@ -666,7 +666,7 @@ h1#title {
   display: flex;
   flex-direction: column; /* Флаги вертикально */
   align-items: center;
-  top: 85px;
+  top: 90px;
  
   gap: 5px;
 }
